@@ -342,18 +342,21 @@ namespace CascadeDesktop
         }
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
+            if (proxy == null) return;
             proxy.RedrawView();
             proxy.UpdateView();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            if (proxy == null) return;
             proxy.RedrawView();
             proxy.UpdateView();
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
+            if (proxy == null) return;
             proxy.UpdateView();
         }
 
